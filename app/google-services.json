@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1096338063444",
+    "firebase_url": "https://tvshowapp-631e9.firebaseio.com",
+    "project_id": "tvshowapp-631e9",
+    "storage_bucket": "tvshowapp-631e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096338063444:android:479105ffcfd97288fdedc1",
+        "android_client_info": {
+          "package_name": "uk.ac.tees.tvshowapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1096338063444-5pvlj53i3q6e1rqo735q49ao9aq1eksm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7SeVDxyoDpeqhf8sPdvd79fVbGctjr60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1096338063444-5pvlj53i3q6e1rqo735q49ao9aq1eksm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

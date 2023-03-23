@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/TVShows" >
+        <item
+            android:id="@+id/TrendingShows"
+            android:icon="@drawable/ic_trending_up_black_24dp"
+            android:title="Trending Shows" />
+        <item
+            android:id="@+id/DiscoverShows"
+            android:icon="@drawable/ic_filter_list_black_24dp"
+            android:title="Discover Shows" />
+        <item
+            android:id="@+id/LocalTV"
+            android:icon="@drawable/ic_location_on_black_24dp"
+            android:title="Popular Shows in Your Area" />
+        <item
+            android:id="@+id/MyShows"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="My Shows" />
+        <item
+            android:id="@+id/SearchShows"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Search Shows" />
+    </group>
+    <group android:id="@+id/Films">
+        <item
+            android:id="@+id/TrendingFilms"
+            android:icon="@drawable/ic_trending_up_black_24dp"
+            android:title="Trending Films" />
+        <item
+            android:id="@+id/DiscoverFilms"
+            android:icon="@drawable/ic_filter_list_black_24dp"
+            android:title="Discover Films" />
+        <item
+            android:id="@+id/LocalFilms"
+            android:icon="@drawable/ic_location_on_black_24dp"
+            android:title="Popular Films in Your Area" />
+        <item
+            android:id="@+id/MyFilms"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="My Films" />
+        <item
+            android:id="@+id/SearchFilms"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Search Films" />
+    </group>
+    <group android:id="@+id/People" >
+        <item
+            android:id="@+id/TrendingPeople"
+            android:icon="@drawable/ic_trending_up_black_24dp"
+            android:title="Trending People" />
+        <item
+            android:id="@+id/SearchPeople"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Search People" />
+    </group>
+    <item
+        android:id="@+id/InviteFriend"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="Invite a Friend" />
+    <item
+        android:id="@+id/Settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Settings" />
+    <item
+        android:id="@+id/spacing"
+        android:title=""
+        android:enabled="false" />
+</menu>

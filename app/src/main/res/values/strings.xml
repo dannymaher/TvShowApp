@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Showtime</string>
+
+    <string name="PLAY_STORE_LINK">PLAY_STORE_LINK</string>
+    <string name="film_notifications_channel_name">Film Releases</string>
+    <string name="film_notifications_channel_description">Notifications for tracked film releases</string>
+    <string name="film_notifications_setting_title">Film Notifications</string>
+    <string name="film_notifications_setting_summary">Get notifications when your tracked films release.</string>
+    <string name="film_notifications_time_title">Film Notification Time</string>
+    <string name="episode_notifications_channel_name">Episode Releases</string>
+    <string name="episode_notifications_channel_description">Notifications for new episodes of tracked shows</string>
+    <string name="tvshow_notifications_setting_summary">Get notifications when a new episode of a tracked show releases.</string>
+    <string name="tvshow_notifications_setting_title">TV Show Notifcations</string>
+    <string name="tvshow_notifications_time_title">TV Show Notification Time</string>
+    <string name="location_required_message">TvShowApp needs to know your location to find what\'s popular in your area.</string>
+    <string name="location_required_title">Location Permission Required</string>
+    <string name="released">Released</string>
+    <string name="sort_by">Sort By</string>
+    <string name="genres">Genres</string>
+    <string name="min_rating">Min Rating</string>
+    <string name="aired_between">Aired Between</string>
+    <string name="episode_title">Episode Title</string>
+    <string name="episode_no">Episode -</string>
+    <string name="image_from_film">Image from film</string>
+    <string name="film_dates">film dates</string>
+    <string name="film_overview">film overview</string>
+    <string name="film_name">Film Name</string>
+    <string name="runtime">runtime</string>
+    <string name="produced_in">Produced In:</string>
+    <string name="produced_by">Produced By:</string>
+    <string name="recommended_films">Recommended Films</string>
+    <string name="cast">Cast</string>
+    <string name="directed_by">Directed By</string>
+    <string name="no_popular_nearby_shows_message">There are no shows popular in your area</string>
+    <string name="no_results">No Results</string>
+    <string name="failed_to_load_popular">Failed to load popular nearby, try again later.</string>
+    <string name="failed_to_load_popular_network">Failed to load popular nearby, check your network.</string>
+    <string name="no_popular_nearby_films_message">There are no films popular in your area.</string>
+    <string name="biography">Biography</string>
+    <string name="directed">Directed</string>
+    <string name="tv_shows_starred_in">TV Shows Starred In</string>
+    <string name="films_starred_in">Films Starred In</string>
+    <string name="an_image_of_the_episode">an image of the episode</string>
+    <string name="invite_contact_message">Try this app, %s, to keep track of all your favourite shows and upcoming movies. %s</string>
+    <string name="last_episode">Last Episode</string>
+</resources>

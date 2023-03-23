@@ -1,0 +1,42 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Account Settings">
+
+        <Preference
+            app:key="log_out"
+            app:summary="Log out of the app, you will be asked to sign in again."
+            app:title="Log Out" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notifications">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="film_notifications"
+            android:summary="@string/film_notifications_setting_summary"
+            android:title="@string/film_notifications_setting_title" />
+        <ListPreference
+            android:defaultValue="0"
+            android:dependency="film_notifications"
+            android:entries="@array/notification_time_headings"
+            android:entryValues="@array/notification_time_values"
+            android:key="film_notifications_time"
+            android:title="@string/film_notifications_time_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="tvshow_notifications"
+            android:summary="@string/tvshow_notifications_setting_summary"
+            android:title="@string/tvshow_notifications_setting_title" />
+        <ListPreference
+            android:defaultValue="0"
+            android:dependency="tvshow_notifications"
+            android:entries="@array/notification_time_headings"
+            android:entryValues="@array/notification_time_values"
+            android:key="tvshow_notifications_time"
+            android:title="@string/tvshow_notifications_time_title"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

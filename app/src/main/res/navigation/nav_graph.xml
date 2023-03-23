@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/TrendingShows">
+
+    <fragment
+        android:id="@+id/TrendingShows"
+        android:name="uk.ac.tees.tvshowapp.fragments.TrendingTVFragment"
+        android:label="Trending Shows"
+        tools:layout="@layout/fragment_trending" />
+    <fragment
+        android:id="@+id/TVShowDetails"
+        android:name="uk.ac.tees.tvshowapp.fragments.TVShowDetailsFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_tvshow_details" >
+        <argument
+            android:name="tvShow"
+            app:argType="uk.ac.tees.tvshowapp.tmdb.model.TVShow" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_TVShowDetails_to_seasonListFragment"
+            app:destination="@id/SeasonList"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_TVShowDetails_to_SeasonDetails"
+            app:destination="@id/SeasonDetails"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_TVShowDetails_to_EpisodeDetails"
+            app:destination="@id/EpisodeDetails"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_TVShowDetails_to_personDetailsFragment"
+            app:destination="@id/PersonDetails"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/SeasonList"
+        android:name="uk.ac.tees.tvshowapp.fragments.SeasonListFragment"
+        tools:layout="@layout/fragment_season_list" >
+        <argument
+            android:name="tvShow"
+            app:argType="uk.ac.tees.tvshowapp.tmdb.model.TVShow" />
+        <action
+            android:id="@+id/action_SeasonList_to_seasonDetailsFragment"
+            app:destination="@id/SeasonDetails"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <argument
+            android:name="tvShowName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/SeasonDetails"
+        android:name="uk.ac.tees.tvshowapp.fragments.SeasonDetailsFragment"
+        tools:layout="@layout/fragment_season_list">
+        <argument
+            android:name="season"
+            app:argType="uk.ac.tees.tvshowapp.tmdb.model.Season" />
+        <argument
+            android:name="tvShowId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_SeasonDetails_to_episodeDetailsFragment"
+            app:destination="@id/EpisodeDetails"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <argument
+            android:name="tvShowName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/EpisodeDetails"
+        android:name="uk.ac.tees.tvshowapp.fragments.EpisodeDetailsFragment"
+        tools:layout="@layout/fragment_episode_details" >
+        <argument
+            android:name="episode"
+            app:argType="uk.ac.tees.tvshowapp.tmdb.model.Episode" />
+        <argument
+            android:name="tvShowName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/MyShows"
+        android:name="uk.ac.tees.tvshowapp.fragments.MyShowsFragment"
+        android:label="My Shows"
+        tools:layout="@layout/fragment_my_shows" />
+    <action
+        android:id="@+id/action_global_TVShowDetails2"
+        app:destination="@id/TVShowDetails"
+        app:enterAnim="@anim/fragment_open_enter"
+        app:exitAnim="@anim/fragment_open_exit"
+        app:popEnterAnim="@anim/fragment_close_enter"
+        app:popExitAnim="@anim/fragment_close_exit" />
+    <fragment
+        android:id="@+id/Settings"
+        android:name="uk.ac.tees.tvshowapp.fragments.SettingsFragment"
+        android:label="Settings" />
+    <fragment
+        android:id="@+id/TrendingFilms"
+        android:name="uk.ac.tees.tvshowapp.fragments.TrendingFilmFragment"
+        android:label="Trending Films"
+        tools:layout="@layout/fragment_trending" />
+    <fragment
+        android:id="@+id/FilmDetails"
+        android:name="uk.ac.tees.tvshowapp.fragments.FilmDetailsFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_film_details" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_FilmDetails_to_PersonDetails"
+            app:destination="@id/PersonDetails"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+        <argument
+            android:name="film"
+            app:argType="uk.ac.tees.tvshowapp.tmdb.model.Film" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_FilmDetails"
+        app:destination="@id/FilmDetails"
+        app:enterAnim="@anim/fragment_open_enter"
+        app:exitAnim="@anim/fragment_open_exit"
+        app:popEnterAnim="@anim/fragment_close_enter"
+        app:popExitAnim="@anim/fragment_close_exit" />
+    <fragment
+        android:id="@+id/DiscoverShows"
+        android:name="uk.ac.tees.tvshowapp.fragments.DiscoverTVFragment"
+        android:label="Discover Shows"
+        tools:layout="@layout/fragment_trending">
+        <action
+            android:id="@+id/action_Discover_to_DiscoverFilterOptions"
+            app:destination="@id/DiscoverFilterOptions"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/DiscoverFilterOptions"
+        android:name="uk.ac.tees.tvshowapp.fragments.DiscoverTVFilteringFragment"
+        android:label="Filter Options"
+        tools:layout="@layout/fragment_discover_filtering" />
+    <fragment
+        android:id="@+id/DiscoverFilmsFilteringOptions"
+        android:name="uk.ac.tees.tvshowapp.fragments.DiscoverFilmsFilteringFragment"
+        android:label="Filtering Options" />
+    <fragment
+        android:id="@+id/DiscoverFilms"
+        android:name="uk.ac.tees.tvshowapp.fragments.DiscoverFilmsFragment"
+        android:label="Discover Films">
+        <action
+            android:id="@+id/action_discoverFilmsFragment_to_discoverFilmsFilteringFragment"
+            app:destination="@id/DiscoverFilmsFilteringOptions" />
+    </fragment>
+    <fragment
+        android:id="@+id/MyFilms"
+        android:name="uk.ac.tees.tvshowapp.fragments.MyFilmsFragment"
+        android:label="My Films" />
+    <fragment
+        android:id="@+id/PersonDetails"
+        android:name="uk.ac.tees.tvshowapp.fragments.PersonDetailsFragment"
+        android:label="{title}">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="person"
+            app:argType="uk.ac.tees.tvshowapp.tmdb.model.Person" />
+    </fragment>
+    <fragment
+        android:id="@+id/LocalTV"
+        android:name="uk.ac.tees.tvshowapp.fragments.LocalTVFragment"
+        android:label="Popular Shows in Your Area"
+        tools:layout="@layout/fragment_local_tv" />
+    <fragment
+        android:id="@+id/TrendingPeople"
+        android:name="uk.ac.tees.tvshowapp.fragments.TrendingPersonFragment"
+        android:label="Trending People" />
+    <fragment
+        android:id="@+id/LocalFilms"
+        android:name="uk.ac.tees.tvshowapp.fragments.LocalFilmsFragment"
+        android:label="Popular Films in Your Area"
+        tools:layout="@layout/fragment_local_tv" />
+    <fragment
+        android:id="@+id/SearchPeople"
+        android:name="uk.ac.tees.tvshowapp.fragments.PeopleSearchFragment"
+        android:label="Search People" />
+    <fragment
+        android:id="@+id/SearchFilms"
+        android:name="uk.ac.tees.tvshowapp.fragments.FilmSearchFragment"
+        android:label="Search Films" />
+    <fragment
+        android:id="@+id/SearchShows"
+        android:name="uk.ac.tees.tvshowapp.fragments.TVSearchFragment"
+        android:label="Search Shows" />
+    <fragment
+        android:id="@+id/reviewDetailsFragment"
+        android:name="uk.ac.tees.tvshowapp.fragments.ReviewDetailsFragment"
+        android:label="{title}" />
+</navigation>
